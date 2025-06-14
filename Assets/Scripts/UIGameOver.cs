@@ -19,12 +19,7 @@ public class UIGameOver : MonoBehaviour
     {
         scoreText.text = "You Scored:\n" + scoreKeeper.GetScore();
 
-        int id = 1; // Replace with actual ID
-        string name = "PlayerName"; // Replace with actual name
-        int score = scoreKeeper.GetScore(); // Replace with actual score
-        string region = "RegionName";
-
-        ASM_MN.YC1(id, name, score, region);
+        ASM_MN.YC1(scoreKeeper.GetID(), scoreKeeper.GetScore(), scoreKeeper.GetUserName(), ASM_MN.listRegion[scoreKeeper.GetIDregion()]);
         ASM_MN.YC2();
         ASM_MN.YC3();
         ASM_MN.YC4();
@@ -32,8 +27,4 @@ public class UIGameOver : MonoBehaviour
         ASM_MN.YC6();
         ASM_MN.YC7();
     }
-
-    
-
-
 }

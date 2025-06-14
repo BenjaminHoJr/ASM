@@ -11,7 +11,7 @@ public class Pathfinder : MonoBehaviour
 
     void Awake()
     {
-        enemySpawner = FindObjectOfType<EnemySpawner>();
+        enemySpawner = Object.FindFirstObjectByType<EnemySpawner>();
     }
 
     void Start()

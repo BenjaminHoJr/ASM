@@ -19,9 +19,9 @@ public class Health : MonoBehaviour
     void Awake()
     {
         cameraShake = Camera.main.GetComponent<CameraShake>();
-        audioPlayer = FindObjectOfType<AudioPlayer>();
-        scoreKeeper = FindObjectOfType<ScoreKeeper>();
-        levelManager = FindObjectOfType<LevelManager>();
+        audioPlayer = Object.FindFirstObjectByType<AudioPlayer>();
+        scoreKeeper = Object.FindFirstObjectByType<ScoreKeeper>();
+        levelManager = Object.FindFirstObjectByType<LevelManager>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
